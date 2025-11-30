@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Changa:wght@200..800&family=Madimi+One&family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>964 search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <video id="bgVideo" src="bg123.mp4" autoplay muted loop playsinline preload="auto" poster="" aria-hidden="true"></video>
+
+        <!-- Fullscreen loading overlay shown while the app initializes -->
+        <div id="loading-screen" class="loading-screen" aria-hidden="false" role="status" aria-live="polite">
+            <div class="loading-inner">
+                <div class="loading-center">
+                    <div class="loading-logo" aria-hidden="true">☕</div>
+                    <div class="loading-dots" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="container">
+        <h1> محرك بحث الإيموجي</h1>
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="أدخل إيموجي هنا..." oninput="showSuggestions()">
+            <button id="emoji-picker-btn" aria-label="فتح قائمة الإيموجي" title="الإيموجي">☕</button>
+        </div>
+        <div id="emoji-picker-container"></div>
+        <ul id="suggestions">
+        </ul>
+    </div>
+        <!-- floating audio control (outside main container) -->
+        <div id="floating-audio" class="floating-audio" aria-hidden="false">
+            <audio id="bg-audio" preload="none" src="Laufey - From The Start (Official Music Video)(MP3_160K).mp3"></audio>
+            <button id="floating-audio-btn" class="floating-audio-btn" aria-pressed="false" aria-label="تشغيل/إيقاف الموسيقى">
+                <!-- small music-note SVG logo (keeps it compact) -->
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M19 3v12.55A4 4 0 1 0 17 19V8h-4V3h6z" fill="currentColor" />
+                </svg>
+            </button>
+        </div>
+
+        <script src="script.js"></script>
+</body>
+</html>
